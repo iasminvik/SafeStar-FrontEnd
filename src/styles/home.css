@@ -1,0 +1,242 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garantir que o contêiner ocupe toda a altura da tela */
+  background: linear-gradient(135deg, #141414, #e50914); /* Adicionar gradiente */
+  background-size: cover;
+  background-position: center;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start; /* Alinhar itens à esquerda */
+  align-items: center;
+  height: 150px; /* Aumentar a altura do cabeçalho */
+  background-color: #000; /* Adicionar faixa preta */
+  z-index: 1; /* Garantir que o cabeçalho fique acima do fundo */
+  padding: 0 20px; /* Adicionar padding para espaçamento */
+}
+
+.logo {
+  width: 200px; /* Ajuste o tamanho conforme necessário */
+  margin-top: 20px; /* Adicionar margem superior para abaixar a logo */
+  margin-right: 20px; /* Espaçamento entre a logo e os links */
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px; /* Espaçamento entre os links */
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.banner-container {
+  position: relative; /* Necessário para posicionar a barra de pesquisa sobre o banner */
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: flex-end; /* Alinhar a barra de pesquisa à direita */
+  align-items: center;
+  padding: 20px; /* Adicionar padding para espaçamento */
+  position: absolute; /* Posicionar a barra de pesquisa sobre o banner */
+  top: 10%; /* Ajustar esta propriedade para subir ou descer a barra de pesquisa */
+  right: 20px; /* Ajustar a posição para a direita */
+  transform: translateY(-50%); /* Ajustar a posição para centralizar verticalmente */
+  background-color: rgba(78, 73, 73, 0.5); /* Fundo semi-transparente para melhor visibilidade */
+  border-radius: 5px; /* Bordas arredondadas */
+  z-index: 2; /* Garantir que a barra de pesquisa fique acima do banner */
+}
+
+.search-input {
+  padding: 10px;
+  border: none;
+  border-radius: 3px 0 0 3px;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0 3px 3px 0;
+  background-color: #e50914;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-button:hover {
+  background-color: #d10000;
+}
+
+.overlay-image {
+  position: absolute;
+  top: -7%; /* Ajuste conforme necessário para subir a imagem */
+  left: 5%; /* Ajuste conforme necessário */
+  width: 58%; /* Ajuste o tamanho conforme necessário */
+  height: auto; /* Manter a proporção da imagem */
+}
+
+.games-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px; /* Adiciona espaço no topo */
+}
+
+.games-title {
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 35px;
+}
+
+.games-subtitle {
+  align-self: flex-start; /* Alinha o subtítulo à esquerda */
+  margin-left: 24%; /* Ajusta a margem à esquerda */
+  color: #fff;
+  font-size: 28px;
+}
+
+.games-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Espaçamento entre as imagens */
+  margin-bottom: 20px; /* Espaçamento entre as fileiras */
+}
+
+.game {
+  position: relative;
+  margin: 10px;
+}
+
+.game-image {
+  width: 300px; /* Ajuste o tamanho conforme necessário */
+  height: auto;
+  transition: all 0.3s ease; /* Transição suave */
+}
+
+.game:hover .game-image {
+  filter: blur(5px); /* Efeito de desfoque */
+  transform: scale(1.05); /* Aumentar ligeiramente */
+}
+
+.game:hover .overlay {
+  opacity: 1; /* Mostrar o texto ao passar o mouse */
+  transform: scale(1); /* Crescer o texto */
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centralizar o texto */
+  color: #fff;
+  font-size: 24px;
+  opacity: 0; /* Esconder o texto inicialmente */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Transição suave */
+  pointer-events: none; /* Garantir que o texto não interfira na interação do mouse */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Centralizar o texto */
+  width: 7%; /* Garantir que a largura seja 100% */
+  height: 10%; /* Garantir que a altura seja 100% */
+}
+
+.footer {
+  background-color: #000000 !important; /* Garantindo que a cor de fundo seja preta */
+  color: #fff;
+  padding: 5px 10px; /* Mantendo o padding reduzido */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 12px; /* Mantendo o tamanho da fonte reduzido */
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: flex-start; /* Alinha os itens à esquerda */
+  align-items: flex-start; /* Alinha os itens ao topo */
+  width: 100%;
+  flex-wrap: nowrap; /* Certifique-se de que os itens não quebrem para a próxima linha */
+}
+
+.footer-logo {
+  flex: 0 0 auto; /* Impede que a logo ocupe mais espaço do que necessário */
+  display: flex;
+  justify-content: flex-start; /* Alinha a logo à esquerda */
+  align-items: center;
+}
+
+.footer-links {
+  flex: 0 0 auto; /* Impede que os links ocupem mais espaço do que necessário */
+  display: flex;
+  flex-direction: column; /* Alinha os links verticalmente */
+  gap: 10px; /* Mantém o espaçamento entre os links */
+  margin-top: 60px; /* Adiciona margem superior para afastar do topo */
+  padding-right: 2%;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.footer-links a {
+  color: inherit; /* Herdará a cor definida no elemento pai */
+  text-decoration: none; /* Remove o sublinhado */
+}
+
+.footer-contact {
+  flex: 1;
+  flex-direction: column; /* Alinha os links verticalmente */
+  margin-top: 5%; /* Adiciona margem superior para afastar do topo */
+  display: flex;
+}
+
+.footer-logo-img {
+  width: 200px; /* Ajuste o tamanho conforme necessário */
+}
+
+footer h6 {
+  padding-left: 30%;
+  padding-top: 5%;
+}
+
+.auth-container {
+  color: #fff; /* Cor do texto da frase */
+}
+
+.auth-container .btn {
+  background-color: #e50914; /* Cor de fundo dos botões */
+  color: white; /* Cor do texto dos botões */
+  border: none; /* Remover borda padrão */
+  padding: 10px 15px; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s; /* Efeito de transição */
+}
+
+.auth-container .btn:hover {
+  background-color: #850000; /* Cor de fundo ao passar o mouse */
+}
+
+.auth-container .me-2 {
+  margin-right: 10px; /* Espaço entre a frase e o primeiro botão */
+}

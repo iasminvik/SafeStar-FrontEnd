@@ -1,0 +1,161 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url('../img/fundo.png'), linear-gradient(135deg, #141414, #e50914);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  transition: background 0.5s ease-in-out;
+}
+
+.logo {
+  width: 350px;
+  margin-top: -150px;
+  transition: width 0.3s ease-in-out;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #574e4e77;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 3px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.btn-block {
+  width: 100%;
+  padding: 10px;
+  background-color: #d10000;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(139, 139, 139, 0.5);
+  padding: 30px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.create-account-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.create-account-link a {
+  color: #ff0000a8;
+  text-decoration: none;
+}
+
+.create-account-link a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  background-color: #000000 !important; /* Garantindo que a cor de fundo seja preta */
+  color: #fff;
+  padding: 5px 10px; /* Mantendo o padding reduzido */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 12px; /* Mantendo o tamanho da fonte reduzido */
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: flex-start; /* Alinha os itens à esquerda */
+  align-items: flex-start; /* Alinha os itens ao topo */
+  width: 100%;
+  flex-wrap: nowrap; /* Certifique-se de que os itens não quebrem para a próxima linha */
+}
+
+.footer-logo {
+  flex: 0 0 auto; /* Impede que a logo ocupe mais espaço do que necessário */
+  display: flex;
+  justify-content: flex-start; /* Alinha a logo à esquerda */
+  align-items: center;
+}
+
+.footer-links {
+  flex: 0 0 auto; /* Impede que os links ocupem mais espaço do que necessário */
+  display: flex;
+  flex-direction: column; /* Alinha os links verticalmente */
+  gap: 5px; /* Mantém o espaçamento entre os links */
+  margin-top: 20px; /* Adiciona margem superior para afastar do topo */
+  padding-right: 2%;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.footer-links a {
+  color: inherit; /* Herdará a cor definida no elemento pai */
+  text-decoration: none; /* Remove o sublinhado */
+}
+
+.footer-contact {
+  flex: 1;
+  flex-direction: column; /* Alinha os links verticalmente */
+  margin-top: 2%; /* Adiciona margem superior para afastar do topo */
+  display: flex;
+}
+
+.footer-logo-img {
+  width: 150px; /* Ajuste o tamanho conforme necessário */
+}
+
+footer h6 {
+  padding-left: 20%;
+  padding-top: 2%;
+}
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 20px;
+  }
+  .login-form {
+    width: 100%;
+  }
+  .logo {
+    width: 250px;
+    margin-top: -100px;
+  }
+  .footer {
+    padding: 20px;
+  }
+}
